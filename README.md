@@ -1,15 +1,27 @@
 # FastAPI Factorial API
 
-This is a simple FastAPI application that calculates the factorial of a given number.
+## Objectives
+- Introduce FastAPI as a technology stack for developing APIs
+- Review Python as a programming language for API development
+- Create, run, and test APIs created using FastAPI
+- Practice logic building and technical expertise through coding
+
+## Instructions
+1. Create an API that will fulfill the following requirements:
+   - Written in FastAPI
+   - Endpoint Name: `/factorial/{starting_number}`
+   - Endpoint should execute the following logic:
+     - Compute the factorial of the inputted value in the endpoint
+     - If the value inputted is 0, the endpoint should return `{ "result": false }`
+     - Implement the code using a while loop
+2. Turn in the GitHub repository link of the code, together with dependencies needed to run the application in Google Classroom
 
 ## Features
-- Calculates the factorial of a given number.
-- Returns a JSON response.
-- Built with FastAPI.
+- Computes the factorial of a positive integer.
+- Returns an error response if the input is 0.
+- Uses FastAPI for efficient and easy API handling.
 
 ## Requirements
-
-Ensure you have the following installed:
 - Python 3.7+
 - FastAPI
 - Uvicorn
@@ -18,14 +30,14 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-username/fastapi-factorial.git
-   cd fastapi-factorial
+   git clone https://github.com/yourusername/factorial-api.git
+   cd factorial-api
    ```
 
 2. Create a virtual environment (optional but recommended):
    ```sh
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
    ```
 
 3. Install dependencies:
@@ -34,22 +46,19 @@ Ensure you have the following installed:
    ```
 
 ## Running the API
-
 Start the FastAPI server using Uvicorn:
 ```sh
 uvicorn main:app --reload
 ```
 
 ## Usage
-
-Send a GET request to:
+Make a GET request to the following endpoint to get the factorial of a number:
+```sh
+GET http://127.0.0.1:8000/factorial/{starting_number}
 ```
-http://127.0.0.1:8000/factorial/{starting_number}
-```
-Replace `{starting_number}` with the number whose factorial you want to calculate.
 
 ### Example Request:
-```
+```sh
 GET http://127.0.0.1:8000/factorial/5
 ```
 
@@ -61,12 +70,9 @@ GET http://127.0.0.1:8000/factorial/5
 }
 ```
 
-If `starting_number` is `0`, the API will return:
-```json
-{
-  "return": false
-}
-```
+## API Documentation
+Once the server is running, you can view the interactive API documentation at:
+- Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
 ## License
-
