@@ -70,5 +70,3 @@ If `starting_number` is `0`, the API will return:
 
 ## License
 
-This project is licensed under the MIT License. See `LICENSE` for more details.
-
